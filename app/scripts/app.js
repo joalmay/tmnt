@@ -17,7 +17,12 @@ app.config(function($stateProvider, $urlRouterProvider) {
     .state('main', {
       url: "/",
       templateUrl: 'views/main.html',
-      controller: "MainCtrl"
+      controller: "MainCtrl",
+      resolve: {
+  			teams: function(TurtleService) {
+   	 			return TurtleService.getTeams();
+	 	 	}
+		}
     })
     .state('team', {
       url: '/team/:teamId',
