@@ -2,9 +2,12 @@
 
 <ul>
     <li ng-repeat="character in team.characters" dv-color="green">
-        {{character.name }} ( Id:{{character.id}})
+        <dv-append text="{{character.name }} ( Id:{{character.id}})" append="is a filthy animal.">Jabberwocky</dv-append>
     </li>
 </ul>
+<h3> Table:</h3><hr>
+<div dv-table="team" dv-table-headers="['ID', 'Name']"></div>
 
 <hr>
 <a ui-sref="main">Back To Main</a>
+
