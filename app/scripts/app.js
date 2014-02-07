@@ -20,7 +20,8 @@ app.config(function($stateProvider, $urlRouterProvider) {
       controller: "MainCtrl",
       resolve: {
   			teams: function(TurtleService) {
-          console.log("TurtleService Teams => ", TurtleService.getTeams);
+          //console.log("TurtleService Teams => ", TurtleService.getTeams);
+           
            return TurtleService.getTeams();
 	 	 	   }
 

@@ -33,16 +33,12 @@ angular.module('tmntApp')
 	  		var deferred = $q.defer();
 
 	  		$http.get("http://pure-ocean-3603.herokuapp.com/team").success(function(data) {
-	      		
+	      		debugger;
 	      		console.log("data teams", data);
 	     // 		console.log("defTeams", deferred.resolve(data[0]));
-
-	      		if (Array.isArray(data)){
-	  				deferred.resolve(data[0]);
-	  			} else {
 	  				deferred.resolve(data);
-	  			}
 	    	});
+
 	    	console.log("deferred", deferred.promise);
 
 	    	return deferred.promise;
