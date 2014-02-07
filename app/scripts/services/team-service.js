@@ -1,4 +1,4 @@
-'use strict';
+/*'use strict';
 
 angular.module('tmntApp')
   .service('TeamService', function TeamService($q, $http) {
@@ -14,3 +14,4 @@ angular.module('tmntApp')
 		}
 	}
   });
+*/

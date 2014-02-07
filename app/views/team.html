@@ -1,1 +1,10 @@
-<p>This is the team view.</p>
+<h1>{{ team.name }}</h1>
+
+<ul>
+    <li ng-repeat="character in team.characters" dv-color="green">
+        {{character.name }} ( Id:{{character.id}})
+    </li>
+</ul>
+
+<hr>
+<a ui-sref="main">Back To Main</a>

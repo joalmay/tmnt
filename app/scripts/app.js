@@ -20,13 +20,27 @@ app.config(function($stateProvider, $urlRouterProvider) {
       controller: "MainCtrl",
       resolve: {
   			teams: function(TurtleService) {
-   	 			return TurtleService.getTeams();
-	 	 	}
-		}
+          console.log("TurtleService Teams => ", TurtleService.getTeams);
+           return TurtleService.getTeams();
+	 	 	   }
+
+         /*
+      resolve: {
+        teams: function(TurtleService) {
+           return TurtleService.getTeams();
+         }
+         */
+		  }
     })
     .state('team', {
       url: '/team/:teamId',
       templateUrl: 'views/team.html',
-      controller: "TeamCtrl"
-    })
+      controller: "TeamCtrl",
+      resolve: {
+        team: function(TurtleService, $stateParams) {
+           return TurtleService.getTeam($stateParams.teamId);
+         }
+       }
+
+    });
 });
