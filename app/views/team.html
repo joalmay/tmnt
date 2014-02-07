@@ -1,12 +1,13 @@
-<h1>{{ team.name }}</h1>
-
+<hr>
+<h1 dv-color="blue">{{ team.name }}</h1>
+<h3> List:</h3>
 <ul>
     <li ng-repeat="character in team.characters" dv-color="green">
         <dv-append text="{{character.name }} ( Id:{{character.id}})" append="is a filthy animal.">Jabberwocky</dv-append>
     </li>
 </ul>
-<h3> Table:</h3><hr>
-<div dv-table="team" dv-table-headers="['ID', 'Name']"></div>
+<h3> Table:</h3><br>
+<div dv-table="team.characters" dv-table-headers="['ID', 'Name']"></div>
 
 <hr>
 <a ui-sref="main">Back To Main</a>

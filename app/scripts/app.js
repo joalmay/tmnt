@@ -24,13 +24,6 @@ app.config(function($stateProvider, $urlRouterProvider) {
            
            return TurtleService.getTeams();
 	 	 	   }
-
-         /*
-      resolve: {
-        teams: function(TurtleService) {
-           return TurtleService.getTeams();
-         }
-         */
 		  }
     })
     .state('team', {
