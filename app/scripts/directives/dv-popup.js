@@ -9,11 +9,11 @@ angular.module('tmntApp')
       link: function postLink(scope, element, attrs) {
 
         var selector = attrs.dvPopup,
-        targets = angular.element(document.body).children(selector);
-debugger;
+        targets = angular.element(document.body).find(selector);
+//debugger;
         targets.on('click', function () {
         element.find('.popup').toggle();
-        debugger;
+        //debugger;
         });
       }
     };
